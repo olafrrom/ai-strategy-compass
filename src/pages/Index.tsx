@@ -93,8 +93,11 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t border-border py-8 mt-12">
-        <div className="container text-center text-xs text-muted-foreground">
-          Catálogo de Estrategias IA · Versión 1.0
+        <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
+          <span>Catálogo de Estrategias IA · Versión 1.0</span>
+          <a href="/acerca" className="hover:text-foreground transition-colors font-medium">
+            Acerca / Contacto
+          </a>
         </div>
       </footer>
     </div>
