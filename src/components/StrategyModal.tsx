@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Tag, Layers, Award, Zap, Calendar, MessageSquare, ListChecks, FileCheck, ArrowUpRight, Copy, Wrench, Bot } from "lucide-react";
@@ -23,6 +24,8 @@ interface StrategyModalProps {
 }
 
 const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
+  const [expandedTool, setExpandedTool] = useState<string | null>(null);
+
   if (!strategy) return null;
 
   const enfoque = enfoqueConfig[strategy.enfoque];
@@ -36,8 +39,17 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
     }
   };
 
+  const getAIForStep = (paso: string) => {
+    if (!detail) return null;
+    return detail.donde_entra_ia.find((ai) => ai.paso === paso);
+  };
+
+  const handleToolClick = (tool: string) => {
+    setExpandedTool(expandedTool === tool ? null : tool);
+  };
+
   return (
-    <Dialog open={open} onOpenChange={(o) => !o && onClose()}>
+    <Dialog open={open} onOpenChange={(o) => { if (!o) { onClose(); setExpandedTool(null); } }}>
       <DialogContent className="sm:max-w-lg max-h-[85vh] overflow-y-auto">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
@@ -76,21 +88,52 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
               content={detail.cuando_usarla}
             />
 
-            {/* 3. Herramientas IA sugeridas */}
+            {/* 3. Herramientas IA sugeridas — clickable chips */}
             <div>
               <div className="flex items-center gap-2 mb-2.5">
                 <Wrench className="w-4 h-4 text-primary" />
                 <p className="text-xs font-semibold text-foreground">Herramientas IA sugeridas</p>
               </div>
-              <div className="flex flex-wrap gap-2 pl-6">
-                {detail.herramientas_ia.map((tool) => (
-                  <span
-                    key={tool}
-                    className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${toolColors[tool] || "bg-muted text-muted-foreground border-border"}`}
-                  >
-                    {tool}
-                  </span>
-                ))}
+              <div className="pl-6">
+                <div className="flex flex-wrap gap-2">
+                  {detail.herramientas_ia.map((tool) => (
+                    <button
+                      key={tool}
+                      onClick={() => handleToolClick(tool)}
+                      className={`px-2.5 py-1 rounded-full text-xs font-semibold border cursor-pointer transition-all ${
+                        toolColors[tool] || "bg-muted text-muted-foreground border-border"
+                      } ${expandedTool === tool ? "ring-2 ring-accent/50 scale-105" : "hover:scale-105"}`}
+                    >
+                      {tool}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Inline accordion for selected tool */}
+                {expandedTool && detail.herramientas_detalle[expandedTool] && (
+                  <div className="mt-3 p-3 rounded-lg bg-muted/50 border border-border animate-in fade-in slide-in-from-top-2 duration-200">
+                    {(() => {
+                      const td = detail.herramientas_detalle[expandedTool];
+                      return (
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${toolColors[expandedTool]}`}>
+                              {expandedTool}
+                            </span>
+                          </div>
+                          <ToolInfoRow label="Funcionalidad" value={td.funcionalidad} />
+                          <ToolInfoRow label="Aplicación educativa" value={td.aplicacion_educativa} />
+                          <ToolInfoRow label="Nivel" value={td.nivel} />
+                          <ToolInfoRow label="Enfoque" value={td.enfoque} />
+                          <div className="flex items-start gap-2 pt-1 border-t border-border/50">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-accent shrink-0 mt-0.5">💡 Tip</span>
+                            <span className="text-xs text-muted-foreground">{td.tip}</span>
+                          </div>
+                        </div>
+                      );
+                    })()}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -114,63 +157,48 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
               </p>
             </div>
 
-            {/* 5. Pasos */}
+            {/* 5. Pasos — with inline AI badges */}
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <ListChecks className="w-4 h-4 text-primary" />
                 <p className="text-xs font-semibold text-foreground">Pasos</p>
               </div>
-              <ol className="space-y-1.5 pl-6">
-                {detail.pasos.map((paso, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="shrink-0 w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center mt-0.5">
-                      {i + 1}
-                    </span>
-                    {paso}
-                  </li>
-                ))}
+              <ol className="space-y-2.5 pl-6">
+                {detail.pasos.map((paso, i) => {
+                  const aiStep = getAIForStep(paso);
+                  return (
+                    <li key={i} className="flex flex-col gap-1">
+                      <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="shrink-0 w-5 h-5 rounded-full bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center mt-0.5">
+                          {i + 1}
+                        </span>
+                        <span>{paso}</span>
+                      </div>
+                      {aiStep && (
+                        <div className="ml-7 flex items-center gap-1.5">
+                          <Bot className="w-3 h-3 text-accent" />
+                          <span className="text-[11px] text-accent font-medium">
+                            IA → {aiStep.herramienta}
+                          </span>
+                          <span className="text-[11px] text-muted-foreground">
+                            {aiStep.descripcion}
+                          </span>
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
               </ol>
             </div>
 
-            {/* 6. Dónde entra la IA */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Bot className="w-4 h-4 text-primary" />
-                <p className="text-xs font-semibold text-foreground">Dónde entra la IA</p>
-              </div>
-              <div className="pl-6 space-y-0">
-                {detail.donde_entra_ia.map((step, i) => (
-                  <div key={i} className="flex gap-3">
-                    {/* Timeline line */}
-                    <div className="flex flex-col items-center">
-                      <div className="w-2.5 h-2.5 rounded-full bg-primary border-2 border-primary/30 shrink-0 mt-1" />
-                      {i < detail.donde_entra_ia.length - 1 && (
-                        <div className="w-px flex-1 bg-primary/20 my-1" />
-                      )}
-                    </div>
-                    {/* Content */}
-                    <div className="pb-4">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="text-xs font-semibold text-foreground">{step.paso}</span>
-                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${toolColors[step.herramienta] || "bg-muted text-muted-foreground border-border"}`}>
-                          {step.herramienta}
-                        </span>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{step.descripcion}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* 7. Evidencia */}
+            {/* 6. Evidencia */}
             <DetailSection
               icon={<FileCheck className="w-4 h-4 text-primary" />}
               title="Evidencia"
               content={detail.evidencia}
             />
 
-            {/* 8. Expandable Next Level */}
+            {/* 7. Expandable Next Level */}
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="next-level" className="border rounded-lg bg-muted/50 border-border px-3">
                 <AccordionTrigger className="hover:no-underline py-3">
@@ -211,6 +239,13 @@ const InfoRow = ({ icon, label, value }: { icon: React.ReactNode; label: string;
     <span className="text-muted-foreground">{icon}</span>
     <span className="text-muted-foreground w-28 shrink-0">{label}</span>
     <span className="font-medium text-foreground">{value}</span>
+  </div>
+);
+
+const ToolInfoRow = ({ label, value }: { label: string; value: string }) => (
+  <div className="flex items-start gap-2">
+    <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground shrink-0 w-24 mt-0.5">{label}</span>
+    <span className="text-xs text-foreground/80">{value}</span>
   </div>
 );
 
