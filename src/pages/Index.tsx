@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import FilterBar from "@/components/FilterBar";
 import StrategyCard from "@/components/StrategyCard";
@@ -95,9 +96,12 @@ const Index = () => {
       <footer className="border-t border-border py-8 mt-12">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
           <span>Catálogo de Estrategias IA · Versión 1.0</span>
-          <a href="/#/acerca" className="hover:text-foreground transition-colors font-medium">
+          <Link
+            to="/acerca"
+            className="hover:text-foreground transition-colors font-medium"
+          >
             Acerca / Contacto
-          </a>
+          </Link>
         </div>
       </footer>
     </div>
