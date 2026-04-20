@@ -29,6 +29,11 @@ export const strategies: Strategy[] = [
   { id: "EST-016", nombre: "Transferencia al contexto laboral con mini-briefs", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "validada" },
   { id: "EST-017", nombre: "Gestión de proyectos académicos con hitos IA", familia: "Investigación y gestión de proyectos", enfoque: "gestión", tiempo: "20 min", estatus: "premium" },
   { id: "EST-018", nombre: "Co-creación rápida de recursos y entregables", familia: "Co-creación de contenidos", enfoque: "gestión", tiempo: "15 min", estatus: "validada" },
+  { id: "EST-019", nombre: "Diseño de actividades con variación de nivel cognitivo", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "insignia" },
+  { id: "EST-020", nombre: "Simulación de estudiante para detectar fallas", familia: "Coedición y calidad académica", enfoque: "enseñanza", tiempo: "15 min", estatus: "premium" },
+  { id: "EST-021", nombre: "Mapa rápido de conceptos con síntesis estructurada", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
+  { id: "EST-022", nombre: "Microbrief profesional para aplicar aprendizaje", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-023", nombre: "Evaluación adaptativa con retroalimentación inmediata", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "20 min", estatus: "premium" },
 ];
 
 export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
