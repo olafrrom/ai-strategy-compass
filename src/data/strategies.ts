@@ -34,6 +34,11 @@ export const strategies: Strategy[] = [
   { id: "EST-021", nombre: "Mapa rápido de conceptos con síntesis estructurada", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-022", nombre: "Microbrief profesional para aplicar aprendizaje", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "insignia" },
   { id: "EST-023", nombre: "Evaluación adaptativa con retroalimentación inmediata", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-024", nombre: "Rúbrica automática alineada a objetivos", familia: "Instrumentos y rúbricas", enfoque: "enseñanza", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-025", nombre: "Caso detonador con dilema profesional", familia: "Casos, dilemas y simulaciones", enfoque: "innovación", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-026", nombre: "Ruta de aprendizaje autónomo guiada", familia: "Study mode y aprendizaje autónomo", enfoque: "aprendizaje", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-027", nombre: "Curación crítica con contraste de fuentes", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-028", nombre: "Prototipo rápido de recurso explicativo", familia: "Co-creación de contenidos", enfoque: "transformación", tiempo: "20 min", estatus: "premium" },
 ];
 
 export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
