@@ -6,37 +6,38 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 30% 12%;
+    /* Light mode base tokens */
+    --background: 240 8% 97%;            /* #F8F8F9 */
+    --background-secondary: 210 14% 95%; /* #F1F3F5 */
+    --foreground: 234 70% 15%;           /* #111439 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 30% 12%;
+    --card: 0 0% 100%;                   /* #FFFFFF */
+    --card-foreground: 234 70% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 30% 12%;
+    --popover-foreground: 234 70% 15%;
 
-    --primary: 222 60% 18%;
+    --primary: 234 70% 15%;
     --primary-foreground: 45 100% 96%;
 
-    --secondary: 220 16% 93%;
-    --secondary-foreground: 222 30% 18%;
+    --secondary: 210 14% 95%;
+    --secondary-foreground: 234 70% 18%;
 
-    --muted: 220 14% 94%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 218 19% 87%;                /* #E9ECF2 */
+    --muted-foreground: 220 10% 40%;
 
     --accent: 38 92% 55%;
-    --accent-foreground: 222 60% 12%;
+    --accent-foreground: 234 70% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 16% 90%;
-    --input: 220 16% 90%;
+    --border: 234 70% 15%;               /* paired with /10 opacity */
+    --input: 218 19% 87%;
     --ring: 38 92% 55%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
     --premium: 280 60% 55%;
     --premium-foreground: 280 100% 98%;
     --validated: 160 60% 40%;
@@ -44,9 +45,9 @@
     --badge: 38 92% 55%;
     --badge-foreground: 38 100% 10%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(222 60% 14%), hsl(222 50% 22%), hsl(240 40% 28%));
-    --card-shadow: 0 1px 3px hsl(222 30% 12% / 0.06), 0 4px 12px hsl(222 30% 12% / 0.04);
-    --card-shadow-hover: 0 4px 16px hsl(222 30% 12% / 0.1), 0 8px 32px hsl(222 30% 12% / 0.06);
+    --hero-gradient: linear-gradient(135deg, hsl(234 70% 15%), hsl(234 50% 22%), hsl(240 40% 28%));
+    --card-shadow: 0 1px 3px hsl(234 70% 15% / 0.06), 0 4px 12px hsl(234 70% 15% / 0.04);
+    --card-shadow-hover: 0 4px 16px hsl(234 70% 15% / 0.1), 0 8px 32px hsl(234 70% 15% / 0.06);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -59,25 +60,40 @@
   }
 
   .dark {
-    --background: 222 30% 8%;
-    --foreground: 220 20% 95%;
-    --card: 222 25% 12%;
-    --card-foreground: 220 20% 95%;
-    --popover: 222 25% 12%;
-    --popover-foreground: 220 20% 95%;
+    /* Dark mode base tokens */
+    --background: 240 28% 14%;           /* #1A1A2E */
+    --background-secondary: 233 25% 19%; /* #22243A */
+    --foreground: 240 18% 93%;           /* #EAEAF0 */
+
+    --card: 233 27% 20%;                 /* #242741 */
+    --card-foreground: 240 18% 93%;
+
+    --popover: 233 27% 20%;
+    --popover-foreground: 240 18% 93%;
+
     --primary: 38 92% 55%;
-    --primary-foreground: 222 60% 8%;
-    --secondary: 222 20% 16%;
-    --secondary-foreground: 220 20% 90%;
-    --muted: 222 20% 16%;
-    --muted-foreground: 220 10% 55%;
+    --primary-foreground: 234 70% 12%;
+
+    --secondary: 233 25% 19%;
+    --secondary-foreground: 240 18% 93%;
+
+    --muted: 232 28% 25%;                /* #2E3354 */
+    --muted-foreground: 240 12% 70%;
+
     --accent: 38 92% 55%;
-    --accent-foreground: 222 60% 8%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 222 20% 18%;
-    --input: 222 20% 18%;
+    --accent-foreground: 234 70% 12%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 240 18% 93%;
+
+    --border: 240 18% 93%;               /* paired with /10 opacity */
+    --input: 232 28% 25%;
     --ring: 38 92% 55%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(240 30% 10%), hsl(233 28% 16%), hsl(240 25% 22%));
+    --card-shadow: 0 1px 3px hsl(0 0% 0% / 0.25), 0 4px 12px hsl(0 0% 0% / 0.2);
+    --card-shadow-hover: 0 4px 16px hsl(0 0% 0% / 0.35), 0 8px 32px hsl(0 0% 0% / 0.25);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -91,10 +107,27 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border) / 0.1);
+  }
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
+  }
+  /* Soft fade transition for theme switching */
+  body,
+  body * {
+    transition:
+      background-color 350ms ease,
+      border-color 350ms ease,
+      color 350ms ease,
+      fill 350ms ease,
+      stroke 350ms ease,
+      box-shadow 350ms ease;
   }
 }
 
