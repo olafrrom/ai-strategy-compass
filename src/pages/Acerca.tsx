@@ -36,9 +36,10 @@ const Acerca = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="relative overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
+      <div className="relative overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/15 blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.18)_100%)]" />
         </div>
         <div className="absolute top-4 right-4 z-20 md:top-6 md:right-6">
           <ThemeToggle />
@@ -46,7 +47,7 @@ const Acerca = () => {
         <div className="container relative z-10 py-12 md:py-16">
           <button
             onClick={() => navigate("/")}
-            className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-6 font-body"
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors mb-6 font-body"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver al catálogo
@@ -54,7 +55,7 @@ const Acerca = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-4xl font-display font-bold text-primary-foreground"
+            className="text-3xl md:text-4xl font-display font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)]"
           >
             Acerca del Catálogo
           </motion.h1>
@@ -62,7 +63,7 @@ const Acerca = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-primary-foreground/70 mt-2 max-w-xl font-body"
+            className="text-white/85 mt-2 max-w-xl font-body"
           >
             Todo lo que necesitas saber sobre las estrategias IA para educación.
           </motion.p>

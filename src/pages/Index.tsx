@@ -92,8 +92,27 @@ const Index = () => {
         onSelect={(s) => setSelectedStrategy(s)}
       />
 
+      {/* Bottom banner */}
+      <section className="relative overflow-hidden bg-banner-gradient mt-16">
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.2)_100%)]" />
+        <div className="container relative z-10 py-12 md:py-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
+            ¿No sabes por dónde empezar?
+          </h2>
+          <p className="text-white/85 max-w-xl mx-auto mb-6 font-body text-sm md:text-base">
+            Usa el recomendador inteligente y encuentra la estrategia ideal según tu tiempo, enfoque y objetivo.
+          </p>
+          <button
+            onClick={() => setWizardOpen(true)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[hsl(234_70%_15%)] font-semibold text-sm hover:bg-white/90 transition-all shadow-lg shadow-black/20"
+          >
+            ✨ Abrir recomendador
+          </button>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t border-border py-8 mt-12">
+      <footer className="border-t border-border py-8">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
           <span>Catálogo de Estrategias IA · Versión 1.0</span>
           <Link
