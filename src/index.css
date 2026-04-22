@@ -45,9 +45,18 @@
     --badge: 38 92% 55%;
     --badge-foreground: 38 100% 10%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(234 70% 15%), hsl(234 50% 22%), hsl(240 40% 28%));
-    --card-shadow: 0 1px 3px hsl(234 70% 15% / 0.06), 0 4px 12px hsl(234 70% 15% / 0.04);
-    --card-shadow-hover: 0 4px 16px hsl(234 70% 15% / 0.1), 0 8px 32px hsl(234 70% 15% / 0.06);
+    /* Brand accent palette */
+    --brand-blue: 222 100% 62%;     /* #3A7BFF */
+    --brand-indigo: 244 76% 59%;    /* #4F46E5 */
+    --brand-violet: 262 83% 67%;    /* #8B5CF6 */
+    --brand-magenta: 292 84% 61%;   /* #D946EF */
+    --brand-orange: 38 92% 50%;     /* #F59E0B */
+
+    --hero-gradient: linear-gradient(120deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-indigo)) 28%, hsl(var(--brand-violet)) 55%, hsl(var(--brand-magenta)) 78%, hsl(var(--brand-orange)) 100%);
+    --banner-gradient: linear-gradient(120deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-indigo)) 50%, hsl(var(--brand-violet)) 100%);
+    --card-shadow: 0 1px 2px hsl(234 70% 15% / 0.04), 0 4px 14px hsl(234 70% 15% / 0.05);
+    --card-shadow-hover: 0 4px 16px hsl(234 70% 15% / 0.08), 0 12px 32px hsl(234 70% 15% / 0.08);
+    --card-divider: linear-gradient(115deg, transparent 32%, hsl(234 70% 15% / 0.05) 32.3%, transparent 33%, transparent 65%, hsl(234 70% 15% / 0.05) 65.3%, transparent 66%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -90,9 +99,17 @@
     --input: 232 28% 25%;
     --ring: 38 92% 55%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(240 30% 10%), hsl(233 28% 16%), hsl(240 25% 22%));
-    --card-shadow: 0 1px 3px hsl(0 0% 0% / 0.25), 0 4px 12px hsl(0 0% 0% / 0.2);
-    --card-shadow-hover: 0 4px 16px hsl(0 0% 0% / 0.35), 0 8px 32px hsl(0 0% 0% / 0.25);
+    --brand-blue: 222 90% 58%;
+    --brand-indigo: 244 72% 56%;
+    --brand-violet: 262 78% 64%;
+    --brand-magenta: 292 78% 58%;
+    --brand-orange: 38 88% 52%;
+
+    --hero-gradient: linear-gradient(120deg, hsl(222 75% 28%) 0%, hsl(244 60% 32%) 28%, hsl(262 60% 36%) 55%, hsl(292 60% 36%) 78%, hsl(38 70% 38%) 100%);
+    --banner-gradient: linear-gradient(120deg, hsl(222 75% 30%) 0%, hsl(244 60% 34%) 50%, hsl(262 60% 38%) 100%);
+    --card-shadow: 0 1px 2px hsl(0 0% 0% / 0.3), 0 4px 14px hsl(0 0% 0% / 0.22);
+    --card-shadow-hover: 0 4px 18px hsl(0 0% 0% / 0.4), 0 12px 36px hsl(0 0% 0% / 0.3);
+    --card-divider: linear-gradient(115deg, transparent 32%, hsl(240 18% 93% / 0.05) 32.3%, transparent 33%, transparent 65%, hsl(240 18% 93% / 0.05) 65.3%, transparent 66%);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -133,9 +150,34 @@
 
 @layer utilities {
   .text-gradient-hero {
-    background: linear-gradient(135deg, hsl(38 92% 55%), hsl(38 80% 70%));
+    background: linear-gradient(120deg, #ffffff 0%, #FDE7B3 60%, #FFD27A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  .bg-hero-gradient {
+    background: var(--hero-gradient);
+  }
+  .bg-banner-gradient {
+    background: var(--banner-gradient);
+  }
+  /* Premium card with subtle diagonal dividers splitting it into 3 zones */
+  .card-premium {
+    position: relative;
+    isolation: isolate;
+  }
+  .card-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--card-divider);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.9;
+  }
+  .card-premium > * {
+    position: relative;
+    z-index: 1;
   }
 }
