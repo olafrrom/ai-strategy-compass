@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, Compass, ShieldCheck, Sparkles, FlaskConical, Mail, Instagram } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const statusCards = [
   {
@@ -38,6 +39,9 @@ const Acerca = () => {
       <div className="relative overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
+        </div>
+        <div className="absolute top-4 right-4 z-20 md:top-6 md:right-6">
+          <ThemeToggle />
         </div>
         <div className="container relative z-10 py-12 md:py-16">
           <button

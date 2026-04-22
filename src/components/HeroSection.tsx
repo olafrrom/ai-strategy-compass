@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 interface HeroSectionProps {
   searchQuery: string;
@@ -15,6 +16,10 @@ const HeroSection = ({ searchQuery, onSearchChange, totalStrategies, onOpenWizar
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-premium/8 blur-3xl" />
+      </div>
+
+      <div className="absolute top-4 right-4 z-20 md:top-6 md:right-6">
+        <ThemeToggle />
       </div>
 
       <div className="container relative z-10 py-16 md:py-24">
