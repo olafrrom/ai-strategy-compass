@@ -39,6 +39,11 @@ export const strategies: Strategy[] = [
   { id: "EST-026", nombre: "Ruta de aprendizaje autónomo guiada", familia: "Study mode y aprendizaje autónomo", enfoque: "aprendizaje", tiempo: "20 min", estatus: "premium" },
   { id: "EST-027", nombre: "Curación crítica con contraste de fuentes", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "insignia" },
   { id: "EST-028", nombre: "Prototipo rápido de recurso explicativo", familia: "Co-creación de contenidos", enfoque: "transformación", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-029", nombre: "Secuencia didáctica completa con IA", familia: "Diseño instruccional", enfoque: "enseñanza", tiempo: "25 min", estatus: "premium" },
+  { id: "EST-030", nombre: "Feedback guiado por criterios con IA", familia: "Evaluación y retroalimentación", enfoque: "enseñanza", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-031", nombre: "Simulación de conversación profesional", familia: "Simulación y roleplay", enfoque: "transformación", tiempo: "15 min", estatus: "premium" },
+  { id: "EST-032", nombre: "Generación de ejemplos progresivos", familia: "Explicación y comprensión", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
+  { id: "EST-033", nombre: "Síntesis ejecutiva tipo briefing", familia: "Curación y comunicación", enfoque: "transformación", tiempo: "15 min", estatus: "insignia" },
 ];
 
 export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
