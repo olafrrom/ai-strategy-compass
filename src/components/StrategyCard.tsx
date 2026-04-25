@@ -19,7 +19,7 @@ const StrategyCard = ({ strategy, index, onClick }: StrategyCardProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.04 }}
       onClick={onClick}
-      className="card-premium group w-full text-left bg-card rounded-xl border border-border p-5 hover:shadow-[var(--card-shadow-hover)] shadow-[var(--card-shadow)] transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent/40"
+      className="group w-full text-left bg-card rounded-xl border border-border/60 p-5 shadow-[var(--card-shadow)] hover:shadow-[var(--card-shadow-hover)] hover:border-[hsl(var(--brand-indigo)/0.55)] hover:scale-[1.01] transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-accent/40"
     >
       <div className="flex items-start justify-between gap-3 mb-3">
         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium ${enfoque.color}`}>
