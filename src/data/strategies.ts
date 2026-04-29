@@ -44,6 +44,11 @@ export const strategies: Strategy[] = [
   { id: "EST-031", nombre: "Simulación de conversación profesional", familia: "Simulación y roleplay", enfoque: "transformación", tiempo: "15 min", estatus: "premium" },
   { id: "EST-032", nombre: "Generación de ejemplos progresivos", familia: "Explicación y comprensión", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-033", nombre: "Síntesis ejecutiva tipo briefing", familia: "Curación y comunicación", enfoque: "transformación", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-034", nombre: "Inversión del problema para generar soluciones", familia: "Pensamiento estratégico", enfoque: "innovación", tiempo: "15 min", estatus: "premium" },
+  { id: "EST-035", nombre: "Diseño de experiencia desde el error", familia: "Metacognición", enfoque: "aprendizaje", tiempo: "15 min", estatus: "premium" },
+  { id: "EST-036", nombre: "Escenario futuro narrado", familia: "Prospectiva", enfoque: "transformación", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-037", nombre: "Cadena de decisiones con consecuencias", familia: "Simulación", enfoque: "innovación", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-038", nombre: "Reencuadre radical del contenido", familia: "Creatividad", enfoque: "enseñanza", tiempo: "15 min", estatus: "insignia" },
 ];
 
 export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
