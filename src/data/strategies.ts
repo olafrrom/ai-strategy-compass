@@ -1,4 +1,4 @@
-export type Estatus = "insignia" | "validada" | "premium";
+export type Estatus = "referente" | "validada" | "avanzada";
 export type Enfoque = "enseñanza" | "aprendizaje" | "innovación" | "liderazgo" | "transformación" | "gestión";
 
 export interface Strategy {
