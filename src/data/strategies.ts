@@ -49,6 +49,12 @@ export const strategies: Strategy[] = [
   { id: "EST-036", nombre: "Escenario futuro narrado", familia: "Prospectiva", enfoque: "transformación", tiempo: "20 min", estatus: "premium" },
   { id: "EST-037", nombre: "Cadena de decisiones con consecuencias", familia: "Simulación", enfoque: "innovación", tiempo: "20 min", estatus: "premium" },
   { id: "EST-038", nombre: "Reencuadre radical del contenido", familia: "Creatividad", enfoque: "enseñanza", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-044", nombre: "Objetivos de aprendizaje estratégicos", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "insignia" },
+  { id: "EST-045", nombre: "Challenge framework para retos aplicados", familia: "Retos y challenge-based learning", enfoque: "innovación", tiempo: "25 min", estatus: "premium" },
+  { id: "EST-046", nombre: "Debate argumentado con tensión cognitiva", familia: "Pensamiento crítico", enfoque: "aprendizaje", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-047", nombre: "Aprendizaje experiencial guiado", familia: "Aprendizaje experiencial", enfoque: "aprendizaje", tiempo: "20 min", estatus: "insignia" },
+  { id: "EST-048", nombre: "Autonomía estratégica de aprendizaje", familia: "Study mode y aprendizaje autónomo", enfoque: "transformación", tiempo: "20 min", estatus: "premium" },
+  { id: "EST-049", nombre: "Prototipado acelerado con IA", familia: "Prototipado y creación", enfoque: "transformación", tiempo: "30 min", estatus: "premium" },
 ];
 
 export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
