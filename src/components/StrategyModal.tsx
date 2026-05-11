@@ -25,6 +25,7 @@ interface StrategyModalProps {
 
 const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
   const [expandedTool, setExpandedTool] = useState<string | null>(null);
+  const [promptExpanded, setPromptExpanded] = useState(false);
 
   if (!strategy) return null;
 
@@ -146,15 +147,33 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
                 </div>
                 <button
                   onClick={handleCopyPrompt}
+                  aria-label="Copiar prompt completo"
                   className="flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer"
                 >
                   <Copy className="w-3.5 h-3.5" />
                   Copiar
                 </button>
               </div>
-              <p className="text-sm text-foreground/80 font-mono leading-relaxed pl-6">
-                {detail.prompt_base}
-              </p>
+              <div className="pl-6">
+                <div className="relative">
+                  <p
+                    className={`text-sm text-foreground/80 font-mono leading-relaxed whitespace-pre-wrap ${
+                      promptExpanded ? "" : "line-clamp-3"
+                    }`}
+                  >
+                    {detail.prompt_base}
+                  </p>
+                  {!promptExpanded && (
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[hsl(var(--card))] to-transparent" />
+                  )}
+                </div>
+                <button
+                  onClick={() => setPromptExpanded((v) => !v)}
+                  className="mt-2 text-[11px] font-semibold text-primary hover:underline cursor-pointer"
+                >
+                  {promptExpanded ? "Ocultar prompt" : "Ver prompt completo"}
+                </button>
+              </div>
             </div>
 
             {/* 5. Pasos — with inline AI badges */}
