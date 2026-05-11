@@ -20,7 +20,7 @@ export const strategies: Strategy[] = [
   { id: "EST-007", nombre: "Challenge sprint con resolución aplicada", familia: "Retos y challenge-based learning", enfoque: "innovación", tiempo: "25 min", estatus: "avanzada" },
   { id: "EST-008", nombre: "Gamificación con micromisiones y curiosidad", familia: "Gamificación y engagement", enfoque: "innovación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-009", nombre: "Mentor socrático con check-ins reflexivos", familia: "Acompañamiento y mentoría IA", enfoque: "aprendizaje", tiempo: "10 min", estatus: "referente" },
-  { id: "EST-010", nombre: "Study mode de microplanes y rutas autónomas", familia: "Study mode y aprendizaje autónomo", enfoque: "aprendizaje", tiempo: "15 min", estatus: "avanzada" },
+  { id: "EST-010", nombre: "Study mode con rutas autónomas", familia: "Study mode y aprendizaje autónomo", enfoque: "aprendizaje", tiempo: "15 min", estatus: "referente" },
   { id: "EST-011", nombre: "Curación inteligente y mapa rápido de literatura", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-012", nombre: "Coedición académica con checklist y mejora guiada", familia: "Coedición y calidad académica", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-013", nombre: "Laboratorio de pensamiento crítico y superskills", familia: "Super-skills y liderazgo", enfoque: "liderazgo", tiempo: "20 min", estatus: "avanzada" },
