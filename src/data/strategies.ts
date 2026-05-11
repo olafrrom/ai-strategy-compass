@@ -12,7 +12,7 @@ export interface Strategy {
 
 export const strategies: Strategy[] = [
   { id: "EST-001", nombre: "Planeación con fines de aprendizaje alineados", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
-  { id: "EST-002", nombre: "Diseño de actividades con simulación de estudiante", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
+  { id: "EST-002", nombre: "Diseño de actividades con validación rápida", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-003", nombre: "Banco de reactivos y evaluación formativa", familia: "Evaluación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
   { id: "EST-004", nombre: "Diseño de rúbricas y criterios de desempeño", familia: "Evaluación", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-005", nombre: "Escenarios situados para toma de decisiones", familia: "Casos, dilemas y simulaciones", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
@@ -30,7 +30,7 @@ export const strategies: Strategy[] = [
   { id: "EST-017", nombre: "Gestión de proyectos académicos con hitos IA", familia: "Investigación y gestión de proyectos", enfoque: "gestión", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-018", nombre: "Co-creación rápida de recursos y entregables", familia: "Co-creación de contenidos", enfoque: "gestión", tiempo: "15 min", estatus: "validada" },
   { id: "EST-019", nombre: "Diseño de actividades con variación de nivel cognitivo", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
-  { id: "EST-020", nombre: "Simulación de estudiante para detectar fallas", familia: "Coedición y calidad académica", enfoque: "enseñanza", tiempo: "15 min", estatus: "avanzada" },
+  { id: "EST-020", nombre: "Simulación de estudiante para detectar fricción", familia: "Coedición y calidad académica", enfoque: "enseñanza", tiempo: "15 min", estatus: "avanzada" },
   { id: "EST-021", nombre: "Mapa rápido de conceptos con síntesis estructurada", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-022", nombre: "Microbrief profesional para aplicar aprendizaje", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-023", nombre: "Evaluación adaptativa con retroalimentación inmediata", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
@@ -41,7 +41,7 @@ export const strategies: Strategy[] = [
   { id: "EST-028", nombre: "Prototipo rápido de recurso explicativo", familia: "Co-creación de contenidos", enfoque: "transformación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-029", nombre: "Secuencia didáctica completa con IA", familia: "Diseño instruccional", enfoque: "enseñanza", tiempo: "25 min", estatus: "avanzada" },
   { id: "EST-030", nombre: "Feedback guiado por criterios con IA", familia: "Evaluación y retroalimentación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
-  { id: "EST-031", nombre: "Simulación de conversación profesional", familia: "Simulación y roleplay", enfoque: "transformación", tiempo: "15 min", estatus: "avanzada" },
+  { id: "EST-031", nombre: "Roleplay conversacional guiado", familia: "Simulación y roleplay", enfoque: "transformación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-032", nombre: "Generación de ejemplos progresivos", familia: "Explicación y comprensión", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-033", nombre: "Síntesis ejecutiva tipo briefing", familia: "Curación y comunicación", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-034", nombre: "Inversión del problema para generar soluciones", familia: "Pensamiento estratégico", enfoque: "innovación", tiempo: "15 min", estatus: "avanzada" },
