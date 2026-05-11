@@ -8,25 +8,25 @@ const statusCards = [
     label: "Validada",
     icon: <ShieldCheck className="w-5 h-5" />,
     color: "bg-validated/15 text-validated border-validated/30",
-    description: "Estrategia funcional y probada. Ha sido aplicada en contextos educativos reales con resultados verificados.",
+    description: "Estrategia funcional probada. Ha sido aplicada en contextos educativos o profesionales con resultados verificables.",
   },
   {
-    label: "Insignia",
+    label: "Referente",
     icon: <Sparkles className="w-5 h-5" />,
     color: "bg-badge/15 text-badge-foreground border-badge/30",
-    description: "Estrategia altamente recomendada. Combina efectividad pedagógica con facilidad de implementación.",
+    description: "Estrategia altamente recomendada por su claridad, efectividad y aplicabilidad. Representa buenas prácticas y modelos sólidos de implementación pedagógica o profesional con IA.",
   },
   {
-    label: "Premium",
+    label: "Avanzada",
     icon: <Sparkles className="w-5 h-5" />,
     color: "bg-premium/15 text-premium border-premium/30",
-    description: "Estrategia profunda con mayor stack IA. Requiere dominio de múltiples herramientas para máximo impacto.",
+    description: "Estrategia de mayor profundidad y complejidad. Requiere articulación estratégica de herramientas, pensamiento sistémico y dominio metodológico para generar transformación significativa.",
   },
   {
     label: "Experimental",
     icon: <FlaskConical className="w-5 h-5" />,
     color: "bg-sky-500/15 text-sky-400 border-sky-500/30",
-    description: "Exploración creativa y avanzada. En fase de prototipo con potencial disruptivo para entornos innovadores.",
+    description: "Estrategia en exploración o prototipado. Orientada a innovación, nuevas dinámicas o modelos emergentes con potencial disruptivo.",
   },
 ];
 
@@ -147,11 +147,12 @@ const Acerca = () => {
             title="Recomendación de uso"
           >
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Comienza con estrategias marcadas como <strong className="text-foreground">Insignia</strong> o{" "}
-              <strong className="text-foreground">Validada</strong> para familiarizarte con el flujo.
-              Avanza hacia estrategias <strong className="text-foreground">Premium</strong> cuando domines
-              las herramientas base. Las estrategias <strong className="text-foreground">Experimental</strong>{" "}
-              son ideales para innovadores que buscan explorar nuevos territorios pedagógicos.
+              Comienza con estrategias <strong className="text-foreground">Validadas</strong> y{" "}
+              <strong className="text-foreground">Referentes</strong> para familiarizarte con el flujo y la implementación.
+              Avanza hacia estrategias <strong className="text-foreground">Avanzadas</strong> cuando domines
+              la articulación metodológica y el uso estratégico de herramientas IA. Las estrategias{" "}
+              <strong className="text-foreground">Experimentales</strong> son ideales para explorar nuevos
+              enfoques y dinámicas emergentes.
             </p>
           </SectionCard>
         </motion.section>

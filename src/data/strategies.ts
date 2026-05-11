@@ -71,7 +71,7 @@ export const enfoqueConfig: Record<Enfoque, { label: string; icon: string; color
 };
 
 export const estatusConfig: Record<Estatus, { label: string; className: string }> = {
-  insignia: { label: "Insignia", className: "bg-badge/15 text-badge-foreground border-badge/30" },
+  referente: { label: "Referente", className: "bg-badge/15 text-badge-foreground border-badge/30" },
   validada: { label: "Validada", className: "bg-validated/15 text-validated border-validated/30" },
-  premium: { label: "Premium", className: "bg-premium/15 text-premium border-premium/30" },
+  avanzada: { label: "Avanzada", className: "bg-premium/15 text-premium border-premium/30" },
 };
