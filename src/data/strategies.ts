@@ -15,7 +15,7 @@ export const strategies: Strategy[] = [
   { id: "EST-002", nombre: "Diseño de actividades con simulación de estudiante", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-003", nombre: "Banco de reactivos y evaluación formativa", familia: "Evaluación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
   { id: "EST-004", nombre: "Diseño de rúbricas y criterios de desempeño", familia: "Evaluación", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
-  { id: "EST-005", nombre: "Casos y dilemas profesionales con rutas de decisión", familia: "Casos, dilemas y simulaciones", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
+  { id: "EST-005", nombre: "Escenarios situados para toma de decisiones", familia: "Casos, dilemas y simulaciones", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-006", nombre: "Storytelling transmedia para explicar conceptos", familia: "Storytelling y transformación narrativa", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-007", nombre: "Challenge sprint con IA y boss fight académico", familia: "Retos y challenge-based learning", enfoque: "innovación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-008", nombre: "Gamificación con micromisiones y curiosidad intelectual", familia: "Gamificación y engagement", enfoque: "innovación", tiempo: "15 min", estatus: "referente" },
