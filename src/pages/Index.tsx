@@ -25,9 +25,8 @@ const Index = () => {
   }, [searchQuery, selectedEnfoque, selectedFamilia]);
 
   const filteredFamilias = useMemo(() => {
-    const base = selectedEnfoque
-      ? strategies.filter((s) => s.enfoque === selectedEnfoque)
-      : strategies;
+    if (!selectedEnfoque) return [];
+    const base = strategies.filter((s) => s.enfoque === selectedEnfoque);
     return [...new Set(base.map((s) => s.familia))];
   }, [selectedEnfoque]);
 
