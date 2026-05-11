@@ -9,6 +9,7 @@ import {
   FlaskConical,
   Mail,
   Instagram,
+  Linkedin,
   Wrench,
   Code2,
   ListChecks,
@@ -254,26 +255,48 @@ const Acerca = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <SectionCard icon={<Mail className="w-5 h-5 text-primary" />} title="Contacto">
-            <div className="space-y-3">
+          <div
+            className="p-6 md:p-8 rounded-2xl bg-card border border-border"
+            style={{ boxShadow: "var(--card-shadow)" }}
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <Mail className="w-5 h-5 text-primary" />
+              <h2 className="text-base md:text-lg font-display font-bold text-foreground">
+                Contacto
+              </h2>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-2xl">
+              Si deseas compartir ideas, colaborar o proponer nuevas estrategias, puedes conectar
+              directamente a través de los siguientes medios.
+            </p>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <a
-                href="mailto:contacto@estrategiasia.edu"
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                href="mailto:olafrroman@gmail.com"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-secondary/50 border border-border text-sm text-foreground hover:bg-secondary hover:border-primary/20 transition-colors"
               >
                 <Mail className="w-4 h-4 text-accent" />
-                contacto@estrategiasia.edu
+                <span className="font-medium">olafrroman@gmail.com</span>
               </a>
               <a
-                href="https://instagram.com/estrategiasia"
+                href="https://www.instagram.com/olafrrom/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-secondary/50 border border-border text-sm text-foreground hover:bg-secondary hover:border-primary/20 transition-colors"
               >
                 <Instagram className="w-4 h-4 text-accent" />
-                @estrategiasia
+                <span className="font-medium">@olafrrom</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/olaf-rom%C3%A1n/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-secondary/50 border border-border text-sm text-foreground hover:bg-secondary hover:border-primary/20 transition-colors"
+              >
+                <Linkedin className="w-4 h-4 text-accent" />
+                <span className="font-medium">Olaf Román</span>
               </a>
             </div>
-          </SectionCard>
+          </div>
         </motion.section>
 
         <div className="flex justify-center pt-4">
