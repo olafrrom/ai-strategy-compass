@@ -11,7 +11,7 @@ export interface Strategy {
 }
 
 export const strategies: Strategy[] = [
-  { id: "EST-001", nombre: "Planeación didáctica con objetivos inteligentes", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-001", nombre: "Planeación con fines de aprendizaje alineados", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
   { id: "EST-002", nombre: "Diseño de actividades con simulación de estudiante", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-003", nombre: "Banco inteligente de reactivos y microevaluación", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "15 min", estatus: "validada" },
   { id: "EST-004", nombre: "Rúbricas y criterios automatizados por desempeño", familia: "Instrumentos y rúbricas", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
