@@ -31,6 +31,7 @@ export default {
         premium: { DEFAULT: "hsl(var(--premium))", foreground: "hsl(var(--premium-foreground))" },
         validated: { DEFAULT: "hsl(var(--validated))", foreground: "hsl(var(--validated-foreground))" },
         badge: { DEFAULT: "hsl(var(--badge))", foreground: "hsl(var(--badge-foreground))" },
+        experimental: { DEFAULT: "hsl(var(--experimental))", foreground: "hsl(var(--experimental-foreground))" },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

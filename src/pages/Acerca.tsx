@@ -25,7 +25,7 @@ const statusCards = [
   {
     label: "Experimental",
     icon: <FlaskConical className="w-5 h-5" />,
-    color: "bg-sky-500/15 text-sky-400 border-sky-500/30",
+    color: "bg-experimental/15 text-experimental border-experimental/30",
     description: "Estrategia en exploración o prototipado. Orientada a innovación, nuevas dinámicas o modelos emergentes con potencial disruptivo.",
   },
 ];
