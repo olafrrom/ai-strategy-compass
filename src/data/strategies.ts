@@ -13,8 +13,8 @@ export interface Strategy {
 export const strategies: Strategy[] = [
   { id: "EST-001", nombre: "Planeación con fines de aprendizaje alineados", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
   { id: "EST-002", nombre: "Diseño de actividades con simulación de estudiante", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
-  { id: "EST-003", nombre: "Banco inteligente de reactivos y microevaluación", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "15 min", estatus: "validada" },
-  { id: "EST-004", nombre: "Rúbricas y criterios automatizados por desempeño", familia: "Instrumentos y rúbricas", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-003", nombre: "Banco de reactivos y evaluación formativa", familia: "Evaluación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-004", nombre: "Diseño de rúbricas y criterios de desempeño", familia: "Evaluación", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-005", nombre: "Casos y dilemas profesionales con rutas de decisión", familia: "Casos, dilemas y simulaciones", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-006", nombre: "Storytelling transmedia para explicar conceptos", familia: "Storytelling y transformación narrativa", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-007", nombre: "Challenge sprint con IA y boss fight académico", familia: "Retos y challenge-based learning", enfoque: "innovación", tiempo: "20 min", estatus: "avanzada" },
