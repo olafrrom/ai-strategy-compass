@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 interface HeroSectionProps {
@@ -10,6 +11,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ searchQuery, onSearchChange, totalStrategies, onOpenWizard }: HeroSectionProps) => {
+  const navigate = useNavigate();
   return (
     <section className="relative overflow-hidden bg-hero-gradient">
       {/* Soft luminous decoration */}
@@ -60,6 +62,14 @@ const HeroSection = ({ searchQuery, onSearchChange, totalStrategies, onOpenWizar
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[hsl(234_70%_15%)] font-semibold text-sm hover:bg-white/90 transition-all shadow-lg shadow-black/20"
           >
             ✨ Recomendador inteligente
+          </button>
+
+          <button
+            onClick={() => navigate("/acerca")}
+            className="mt-6 text-sm text-white/60 hover:text-white transition-colors inline-flex items-center gap-1 group"
+          >
+            Cómo aprovechar el catálogo
+            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
           </button>
         </motion.div>
       </div>
