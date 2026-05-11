@@ -122,8 +122,8 @@ function scoreStrategies(answers: Answers): { primary: Strategy[]; alternatives:
     if (answers.depth && s.tiempo === answers.depth) score += 3;
     if (answers.result && resultFamilyMap[answers.result]?.includes(s.familia)) score += 3;
     if (answers.goal && goalEnfoqueBoost[answers.goal]?.includes(s.enfoque)) score += 2;
-    if (s.estatus === "insignia") score += 1;
-    if (s.estatus === "premium") score += 0.5;
+    if (s.estatus === "referente") score += 1;
+    if (s.estatus === "avanzada") score += 0.5;
     return { s, score };
   });
 
