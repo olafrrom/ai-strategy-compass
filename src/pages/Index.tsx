@@ -118,7 +118,7 @@ const Index = () => {
             to="/acerca"
             className="hover:text-foreground transition-colors font-medium"
           >
-            Acerca / Contacto
+            Cómo aprovechar el catálogo →
           </Link>
         </div>
       </footer>
