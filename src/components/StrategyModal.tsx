@@ -15,6 +15,7 @@ const toolColors: Record<string, string> = {
   Gemini: "bg-blue-500/15 text-blue-400 border-blue-500/30",
   Gamma: "bg-pink-500/15 text-pink-400 border-pink-500/30",
   Canva: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
+  Consensus: "bg-lime-500/15 text-lime-400 border-lime-500/30",
 };
 
 interface StrategyModalProps {
