@@ -1687,4 +1687,47 @@ export const strategyDetails: Record<string, StrategyDetail> = {
       "Desarrollar una guía de alfabetización IA por nivel de dominio.",
     ],
   },
+  "EST-016": {
+    id: "EST-016",
+    problema_resuelve: "Muchos aprendizajes terminan en comprensión teórica sin aterrizarse en acciones concretas aplicables al contexto profesional o laboral.",
+    cuando_usarla: "Cierre de cursos, talleres, capacitaciones, sesiones estratégicas o procesos de actualización profesional.",
+    herramientas_ia: ["Claude", "Gamma"],
+    herramientas_detalle: {
+      Claude: {
+        funcionalidad: "Transferencia estratégica",
+        aplicacion_educativa: "Ayuda a transformar aprendizajes en acciones, propuestas o implementaciones concretas.",
+        nivel: "Intermedio",
+        enfoque: "Transformación",
+        tip: "Úsalo para aterrizar ideas, sintetizar oportunidades y convertir aprendizaje en aplicación profesional.",
+      },
+      Gamma: {
+        funcionalidad: "Micrositio ejecutivo portable",
+        aplicacion_educativa: "Convierte el mini-brief en un recurso visual, compartible y fácil de presentar o implementar.",
+        nivel: "Intermedio",
+        enfoque: "Transformación",
+        tip: "Utiliza la opción de micrositio para crear una propuesta ligera, portable y visualmente clara.",
+      },
+    },
+    prompt_base: "Actúa como consultor estratégico para [CONTEXTO PROFESIONAL O LABORAL]. A partir de lo aprendido sobre [TEMA, CURSO O EXPERIENCIA], ayúdame a crear un mini-brief ejecutivo que incluya problema u oportunidad detectada, posible aplicación, quick wins, acciones inmediatas, impacto esperado, riesgos básicos y próximos pasos. El objetivo es traducir el aprendizaje en una propuesta concreta, clara y aplicable al entorno profesional.",
+    pasos: [
+      "Identificar oportunidad de aplicación",
+      "Construir mini-brief estratégico",
+      "Priorizar aplicación inmediata",
+      "Convertir el brief en recurso portable",
+      "Compartir y activar transferencia",
+    ],
+    donde_entra_ia: [
+      { paso: "Construir mini-brief estratégico", herramienta: "Claude", descripcion: "Sintetiza acciones, quick wins, posibles impactos y siguientes pasos." },
+      { paso: "Convertir el brief en recurso portable", herramienta: "Gamma", descripcion: "Transforma la propuesta en un micrositio ejecutivo visual y compartible." },
+    ],
+    evidencia: "Mini-brief ejecutivo con acciones aplicables, quick wins y propuesta portable para transferencia profesional.",
+    next_level: "Convertir el mini-brief en micrositio ejecutivo portable en Gamma, diseñar una propuesta de implementación para un equipo o área real, transformar el brief en roadmap operativo de corto plazo, conectar la propuesta con automatización o workflows IA, y escalar la transferencia hacia un piloto institucional o profesional.",
+    next_level_tips: [
+      "Convertir el mini-brief en micrositio ejecutivo portable en Gamma.",
+      "Diseñar una propuesta de implementación para un equipo o área real.",
+      "Transformar el brief en roadmap operativo de corto plazo.",
+      "Conectar la propuesta con automatización o workflows IA.",
+      "Escalar la transferencia hacia un piloto institucional o profesional.",
+    ],
+  },
 };
