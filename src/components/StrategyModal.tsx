@@ -16,6 +16,11 @@ const toolColors: Record<string, string> = {
   Gamma: "bg-pink-500/15 text-pink-400 border-pink-500/30",
   Canva: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
   Consensus: "bg-lime-500/15 text-lime-400 border-lime-500/30",
+  "Gemini Canvas/Pizarras": "bg-teal-500/15 text-teal-400 border-teal-500/30",
+  "Gemini Nano Banana": "bg-yellow-500/15 text-yellow-400 border-yellow-500/30",
+  ElevenLabs: "bg-rose-500/15 text-rose-400 border-rose-500/30",
+  Lumen5: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+  Suno: "bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/30",
 };
 
 interface StrategyModalProps {

@@ -28,7 +28,7 @@ export const strategies: Strategy[] = [
   { id: "EST-015", nombre: "Criterios de uso responsable de IA", familia: "Alfabetización IA y digital", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-016", nombre: "Transferencia al contexto laboral con mini-briefs", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "validada" },
   { id: "EST-017", nombre: "Gestión de proyectos académicos con hitos IA", familia: "Investigación y gestión de proyectos", enfoque: "gestión", tiempo: "20 min", estatus: "avanzada" },
-  { id: "EST-018", nombre: "Co-creación rápida de recursos y entregables", familia: "Co-creación de contenidos", enfoque: "gestión", tiempo: "15 min", estatus: "validada" },
+  { id: "EST-018", nombre: "Co-creación rápida de recursos y entregables", familia: "Co-creación de contenidos", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-019", nombre: "Diseño de actividades con variación de nivel cognitivo", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-020", nombre: "Simulación de estudiante para detectar fricción", familia: "Coedición y calidad académica", enfoque: "enseñanza", tiempo: "15 min", estatus: "avanzada" },
   { id: "EST-021", nombre: "Mapa rápido de conceptos con síntesis estructurada", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
