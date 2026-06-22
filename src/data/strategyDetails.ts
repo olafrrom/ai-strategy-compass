@@ -1989,7 +1989,7 @@ export const strategyDetails: Record<string, StrategyDetail> = {
         aplicacion_educativa: "Ayuda a identificar opciones de herramientas según la vertiente: investigación, escritura, visualización, audio, video, automatización o análisis.",
         nivel: "Inicial-intermedio",
         enfoque: "Transformación",
-        tip: [{"text": "Úsalo cuando necesites comparar opciones actuales por categoría o caso de uso."}]
+        tip: "Úsalo cuando necesites comparar opciones actuales por categoría o caso de uso."
       },
     },
     prompt_base: "Actúa como arquitecto de flujos de trabajo con IA. Diseña un workflow para lograr [OBJETIVO O ENTREGABLE]. Primero identifica las fases del proceso: investigación, análisis, ideación, escritura, visualización, producción, validación, automatización o publicación, según corresponda. Para cada fase define entrada, acción, salida esperada, criterio de calidad y tipo de herramienta recomendada. Después sugiere una combinación mínima de herramientas IA, evitando saturación. El resultado debe ser un flujo claro, replicable y fácil de ejecutar.",
