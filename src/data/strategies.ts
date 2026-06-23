@@ -1,5 +1,12 @@
 export type Estatus = "referente" | "validada" | "avanzada";
-export type Enfoque = "enseñanza" | "aprendizaje" | "innovación" | "liderazgo" | "transformación" | "gestión";
+export type Enfoque =
+  | "enseñanza"
+  | "aprendizaje"
+  | "evaluación"
+  | "innovación"
+  | "liderazgo"
+  | "transformación"
+  | "gestión";
 
 export interface Strategy {
   id: string;
