@@ -1,5 +1,12 @@
 export type Estatus = "referente" | "validada" | "avanzada";
-export type Enfoque = "enseñanza" | "aprendizaje" | "innovación" | "liderazgo" | "transformación" | "gestión";
+export type Enfoque =
+  | "enseñanza"
+  | "aprendizaje"
+  | "evaluación"
+  | "innovación"
+  | "liderazgo"
+  | "transformación"
+  | "gestión";
 
 export interface Strategy {
   id: string;
@@ -13,8 +20,8 @@ export interface Strategy {
 export const strategies: Strategy[] = [
   { id: "EST-001", nombre: "Planeación con fines de aprendizaje alineados", familia: "Planeación didáctica", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
   { id: "EST-002", nombre: "Diseño de actividades con validación rápida", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
-  { id: "EST-003", nombre: "Banco de reactivos y evaluación formativa", familia: "Evaluación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
-  { id: "EST-004", nombre: "Diseño de rúbricas y criterios de desempeño", familia: "Evaluación", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
+  { id: "EST-003", nombre: "Banco de reactivos y evaluación formativa", familia: "Evaluación", enfoque: "evaluación", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-004", nombre: "Diseño de rúbricas y criterios de desempeño", familia: "Evaluación", enfoque: "evaluación", tiempo: "20 min", estatus: "referente" },
   { id: "EST-005", nombre: "Escenarios situados para toma de decisiones", familia: "Casos, dilemas y simulaciones", enfoque: "enseñanza", tiempo: "20 min", estatus: "referente" },
   { id: "EST-006", nombre: "Storytelling transmedia para explicar conceptos", familia: "Storytelling y transformación narrativa", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-007", nombre: "Challenge sprint con resolución aplicada", familia: "Retos y challenge-based learning", enfoque: "innovación", tiempo: "25 min", estatus: "avanzada" },
@@ -33,14 +40,14 @@ export const strategies: Strategy[] = [
   { id: "EST-020", nombre: "Simulación de estudiante para detectar fricción", familia: "Coedición y calidad académica", enfoque: "enseñanza", tiempo: "15 min", estatus: "avanzada" },
   { id: "EST-021", nombre: "Mapa rápido de conceptos con síntesis estructurada", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-022", nombre: "Microbrief profesional para aplicar aprendizaje", familia: "Aplicación profesional y transferencia", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
-  { id: "EST-023", nombre: "Evaluación adaptativa con retroalimentación inmediata", familia: "Evaluación y reactivos", enfoque: "enseñanza", tiempo: "20 min", estatus: "avanzada" },
-  { id: "EST-024", nombre: "Rúbrica automática alineada a objetivos", familia: "Instrumentos y rúbricas", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-023", nombre: "Evaluación adaptativa con retroalimentación inmediata", familia: "Evaluación y reactivos", enfoque: "evaluación", tiempo: "20 min", estatus: "avanzada" },
+  { id: "EST-024", nombre: "Rúbrica automática alineada a objetivos", familia: "Instrumentos y rúbricas", enfoque: "evaluación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-025", nombre: "Caso detonador con dilema profesional", familia: "Casos, dilemas y simulaciones", enfoque: "innovación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-026", nombre: "Ruta de aprendizaje autónomo guiada", familia: "Study mode y aprendizaje autónomo", enfoque: "aprendizaje", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-027", nombre: "Curación crítica con contraste de fuentes", familia: "Curación y síntesis inteligente", enfoque: "aprendizaje", tiempo: "15 min", estatus: "referente" },
   { id: "EST-028", nombre: "Prototipo rápido de recurso explicativo", familia: "Co-creación de contenidos", enfoque: "transformación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-029", nombre: "Secuencia didáctica completa con IA", familia: "Diseño instruccional", enfoque: "enseñanza", tiempo: "25 min", estatus: "avanzada" },
-  { id: "EST-030", nombre: "Feedback guiado por criterios con IA", familia: "Evaluación y retroalimentación", enfoque: "enseñanza", tiempo: "15 min", estatus: "referente" },
+  { id: "EST-030", nombre: "Feedback guiado por criterios con IA", familia: "Evaluación y retroalimentación", enfoque: "evaluación", tiempo: "15 min", estatus: "referente" },
   { id: "EST-031", nombre: "Roleplay conversacional guiado", familia: "Simulación y roleplay", enfoque: "transformación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-032", nombre: "Generación de ejemplos progresivos", familia: "Explicación y comprensión", enfoque: "aprendizaje", tiempo: "15 min", estatus: "validada" },
   { id: "EST-033", nombre: "Síntesis ejecutiva tipo briefing", familia: "Curación y comunicación", enfoque: "transformación", tiempo: "15 min", estatus: "referente" },
@@ -62,13 +69,22 @@ export const strategies: Strategy[] = [
   { id: "EST-049", nombre: "Prototipado acelerado con IA", familia: "Prototipado y creación", enfoque: "transformación", tiempo: "30 min", estatus: "avanzada" },
 ];
 
-export const enfoques: Enfoque[] = ["enseñanza", "aprendizaje", "innovación", "liderazgo", "transformación", "gestión"];
+export const enfoques: Enfoque[] = [
+  "enseñanza",
+  "aprendizaje",
+  "evaluación",
+  "innovación",
+  "liderazgo",
+  "transformación",
+  "gestión"
+];
 
 export const familias = [...new Set(strategies.map(s => s.familia))];
 
 export const enfoqueConfig: Record<Enfoque, { label: string; icon: string; color: string }> = {
   enseñanza: { label: "Enseñanza", icon: "📚", color: "bg-primary/10 text-primary" },
   aprendizaje: { label: "Aprendizaje", icon: "🧠", color: "bg-accent/15 text-accent-foreground" },
+  evaluación: { label: "Evaluación", icon: "🧪", color: "bg-indigo-500/10 text-indigo-500" },
   innovación: { label: "Innovación", icon: "🚀", color: "bg-premium/10 text-premium" },
   liderazgo: { label: "Liderazgo", icon: "⭐", color: "bg-badge/15 text-badge-foreground" },
   transformación: { label: "Transformación", icon: "🔄", color: "bg-validated/10 text-validated" },
