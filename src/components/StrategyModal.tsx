@@ -20,6 +20,7 @@ const toolColors: Record<string, string> = {
   "Gemini Nano Banana": "bg-yellow-500/15 text-yellow-400 border-yellow-500/30",
   ElevenLabs: "bg-rose-500/15 text-rose-400 border-rose-500/30",
   Lumen5: "bg-orange-500/15 text-orange-400 border-orange-500/30",
+  Make: "bg-indigo-500/15 text-indigo-400 border-indigo-500/30",
   Suno: "bg-fuchsia-500/15 text-fuchsia-400 border-fuchsia-500/30",
 };
 
