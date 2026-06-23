@@ -84,6 +84,7 @@ export const familias = [...new Set(strategies.map(s => s.familia))];
 export const enfoqueConfig: Record<Enfoque, { label: string; icon: string; color: string }> = {
   enseñanza: { label: "Enseñanza", icon: "📚", color: "bg-primary/10 text-primary" },
   aprendizaje: { label: "Aprendizaje", icon: "🧠", color: "bg-accent/15 text-accent-foreground" },
+  evaluación: { label: "Evaluación", icon: "🧪", color: "bg-indigo-500/10 text-indigo-500" },
   innovación: { label: "Innovación", icon: "🚀", color: "bg-premium/10 text-premium" },
   liderazgo: { label: "Liderazgo", icon: "⭐", color: "bg-badge/15 text-badge-foreground" },
   transformación: { label: "Transformación", icon: "🔄", color: "bg-validated/10 text-validated" },
