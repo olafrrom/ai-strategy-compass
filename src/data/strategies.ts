@@ -67,6 +67,8 @@ export const strategies: Strategy[] = [
   { id: "EST-047", nombre: "Aprendizaje experiencial guiado", familia: "Aprendizaje experiencial", enfoque: "aprendizaje", tiempo: "20 min", estatus: "referente" },
   { id: "EST-048", nombre: "Autonomía estratégica de aprendizaje", familia: "Study mode y aprendizaje autónomo", enfoque: "transformación", tiempo: "20 min", estatus: "avanzada" },
   { id: "EST-049", nombre: "Prototipado acelerado con IA", familia: "Prototipado y creación", enfoque: "transformación", tiempo: "30 min", estatus: "avanzada" },
+  { id: "EST-050", nombre: "Documentación pedagógica asistida con IA", familia: "Documentación y seguimiento", enfoque: "gestión", tiempo: "20 min", estatus: "referente" },
+  { id: "EST-051", nombre: "Informes de seguimiento con IA", familia: "Documentación y seguimiento", enfoque: "gestión", tiempo: "20 min", estatus: "referente" },
 ];
 
 export const enfoques: Enfoque[] = [
