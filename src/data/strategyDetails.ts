@@ -2086,4 +2086,80 @@ export const strategyDetails: Record<string, StrategyDetail> = {
       "Convertir la orquestación en un sistema operativo de producción con IA para un curso, área o programa.",
     ],
   },
+  "EST-050": {
+    id: "EST-050",
+    problema_resuelve: "La información pedagógica suele quedar dispersa entre notas, actividades, productos y observaciones, dificultando su recuperación, análisis y uso posterior.",
+    cuando_usarla: "Cuando se requiere organizar evidencias, observaciones o registros de estudiantes, grupos, proyectos, actividades o periodos para apoyar planeación, seguimiento, reflexión o comunicación docente. 🔒 Privacidad: utiliza información anonimizada o autorizada y aplica las políticas institucionales de privacidad y protección de datos cuando se trabaje con información de estudiantes.",
+    herramientas_ia: ["ChatGPT"],
+    herramientas_detalle: {
+      ChatGPT: {
+        funcionalidad: "Organización y sistematización de información",
+        aplicacion_educativa: "Clasifica evidencias, observaciones y registros, los vincula con criterios y los convierte en tablas, bitácoras, fichas o matrices consultables.",
+        nivel: "Inicial-intermedio",
+        enfoque: "Gestión",
+        tip: "Trabaja con información anonimizada y pide que se señalen los datos faltantes o ambiguos.",
+      },
+    },
+    prompt_base:
+      "Organiza y estructura la siguiente información pedagógica relacionada con [ACTIVIDAD / GRUPO / PROYECTO / PERIODO]: [EVIDENCIAS, OBSERVACIONES Y REGISTROS].\n\nUtiliza como referencia [OBJETIVOS / CRITERIOS / INDICADORES / DIMENSIONES].\n\nClasifica la información para identificar evidencias relevantes, relacionarlas con los criterios establecidos, reconocer patrones o recurrencias, distinguir información objetiva de interpretaciones docentes y facilitar su recuperación para planeación, seguimiento o comunicación posterior.\n\nPropón una estructura de documentación adecuada para [PROPÓSITO], utilizando una tabla, bitácora, ficha, matriz u otro formato pertinente.\n\nTrabaja únicamente con la información proporcionada. No generes evidencias, comportamientos ni conclusiones adicionales. Señala datos faltantes, ambigüedades y cualquier aspecto que requiera interpretación o validación profesional del docente.",
+    pasos: [
+      "Recopilar evidencias, observaciones y registros",
+      "Clasificar y estructurar",
+      "Relacionar y sistematizar",
+      "Documentar y validar",
+    ],
+    donde_entra_ia: [
+      { paso: "Recopilar evidencias, observaciones y registros", herramienta: "ChatGPT", descripcion: "Organiza información proveniente de notas, actividades, productos u otros registros disponibles." },
+      { paso: "Clasificar y estructurar", herramienta: "ChatGPT", descripcion: "Agrupa la información según objetivos, criterios, indicadores, estudiantes, periodos o categorías pertinentes." },
+      { paso: "Relacionar y sistematizar", herramienta: "ChatGPT", descripcion: "Vincula registros con criterios e identifica patrones, recurrencias, vacíos de información o aspectos que requieren atención." },
+      { paso: "Documentar y validar", herramienta: "ChatGPT", descripcion: "Construye una tabla, bitácora, ficha, matriz o síntesis consultable y señala interpretaciones que requieren validación docente." },
+    ],
+    evidencia: "Registro pedagógico estructurado y sistematizado, organizado a partir de evidencias y criterios y listo para apoyar planeación, seguimiento, reflexión o comunicación docente. 🔒 Privacidad: utiliza información anonimizada o autorizada y aplica las políticas institucionales de privacidad y protección de datos cuando se trabaje con información de estudiantes.",
+    next_level: "Construir una memoria longitudinal del aprendizaje utilizando categorías y criterios comunes para incorporar evidencias periódicas, recuperar antecedentes e identificar patrones. Utilizar esta documentación como insumo para EST-051 · Informes de seguimiento con IA.",
+    next_level_tips: [
+      "Establecer categorías comunes para registros periódicos.",
+      "Construir una memoria longitudinal por estudiante o grupo.",
+      "Recuperar patrones y antecedentes para decisiones pedagógicas.",
+      "Crear plantillas institucionales de documentación.",
+      "Continuar con EST-051 · Informes de seguimiento con IA para transformar la documentación en informes de seguimiento.",
+    ],
+  },
+  "EST-051": {
+    id: "EST-051",
+    problema_resuelve: "La elaboración de informes de seguimiento requiere integrar múltiples evidencias, relacionarlas con criterios y redactar valoraciones individualizadas sin perder trazabilidad ni juicio profesional.",
+    cuando_usarla: "Cuando se necesita elaborar informes periódicos, reportes de progreso, comunicación con familias, seguimiento académico o documentación institucional basada en evidencias. Parte ideal desde la documentación generada en EST-050. 🔒 Privacidad: utiliza información anonimizada o autorizada y aplica las políticas institucionales de privacidad y protección de datos cuando se trabaje con información de estudiantes.",
+    herramientas_ia: ["ChatGPT"],
+    herramientas_detalle: {
+      ChatGPT: {
+        funcionalidad: "Redacción asistida con trazabilidad",
+        aplicacion_educativa: "Contrasta evidencias con criterios, redacta borradores individualizados y marca afirmaciones que requieren validación docente.",
+        nivel: "Inicial-intermedio",
+        enfoque: "Gestión",
+        tip: "Exige siempre la sección 'Revisión docente requerida' antes de comunicar cualquier informe.",
+      },
+    },
+    prompt_base:
+      "Actúa como asistente para la elaboración de informes pedagógicos de seguimiento.\n\nA partir de las siguientes observaciones y evidencias sobre [ESTUDIANTE / GRUPO], elabora un borrador de informe correspondiente a [NIVEL / GRADO / PERIODO].\n\nUtiliza exclusivamente estos objetivos, indicadores o criterios como referencia: [CRITERIOS].\n\nPara cada valoración:\n- identifica el avance observable;\n- vincúlalo con la evidencia que lo sustenta;\n- distingue aspectos consolidados de aquellos en proceso;\n- señala información insuficiente cuando corresponda;\n- propone acciones de acompañamiento pertinentes.\n\nRedacta con un tono [TONO / ESTILO] apropiado para [DESTINATARIO].\n\nUtiliza únicamente la información proporcionada. No infieras capacidades, conductas, diagnósticos ni avances sin evidencia explícita.\n\nAntes de entregar el borrador final, incluye una sección denominada 'Revisión docente requerida' e identifica afirmaciones, interpretaciones o recomendaciones que necesiten juicio profesional antes de comunicar el informe.",
+    pasos: [
+      "Reunir evidencias y criterios de seguimiento",
+      "Contrastar evidencias con criterios",
+      "Construir el borrador del informe",
+      "Revisar con juicio docente",
+    ],
+    donde_entra_ia: [
+      { paso: "Reunir evidencias y criterios de seguimiento", herramienta: "ChatGPT", descripcion: "Organiza la información según objetivos, indicadores o dimensiones establecidas." },
+      { paso: "Contrastar evidencias con criterios", herramienta: "ChatGPT", descripcion: "Identifica avances observables, aspectos en desarrollo y datos insuficientes, manteniendo relación con las evidencias originales." },
+      { paso: "Construir el borrador del informe", herramienta: "ChatGPT", descripcion: "Transforma la información validada en una narrativa individualizada y coherente con el formato y destinatario definidos." },
+      { paso: "Revisar con juicio docente", herramienta: "ChatGPT", descripcion: "Señala generalizaciones, inconsistencias, afirmaciones sin evidencia y fragmentos que requieren validación profesional." },
+    ],
+    evidencia: "Informe de seguimiento individualizado, sustentado en evidencias, alineado con criterios establecidos y validado por el docente. 🔒 Privacidad: utiliza información anonimizada o autorizada y aplica las políticas institucionales de privacidad y protección de datos cuando se trabaje con información de estudiantes.",
+    next_level: "Crear una plantilla institucional de seguimiento con criterios, estructura, reglas de redacción y puntos obligatorios de revisión docente, permitiendo transformar registros periódicos en borradores consistentes y comparables.",
+    next_level_tips: [
+      "Crear una plantilla institucional reutilizable.",
+      "Definir reglas de redacción y tono por destinatario.",
+      "Comparar seguimiento entre periodos.",
+      "Incorporar criterios comunes para grupos o programas.",
+      "Mantener revisión docente obligatoria antes de comunicar o almacenar el informe.",
+    ],
+  },
 };
