@@ -69,6 +69,7 @@ export const strategies: Strategy[] = [
   { id: "EST-049", nombre: "Prototipado acelerado con IA", familia: "Prototipado y creación", enfoque: "transformación", tiempo: "30 min", estatus: "avanzada" },
   { id: "EST-050", nombre: "Documentación pedagógica asistida con IA", familia: "Documentación y seguimiento", enfoque: "gestión", tiempo: "20 min", estatus: "referente" },
   { id: "EST-051", nombre: "Informes de seguimiento con IA", familia: "Documentación y seguimiento", enfoque: "gestión", tiempo: "20 min", estatus: "referente" },
+  { id: "EST-052", nombre: "Rediseña tu clase con IA", familia: "Diseño de actividades", enfoque: "enseñanza", tiempo: "25 min", estatus: "referente" },
 ];
 
 export const enfoques: Enfoque[] = [
