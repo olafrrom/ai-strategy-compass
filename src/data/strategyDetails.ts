@@ -2162,4 +2162,43 @@ export const strategyDetails: Record<string, StrategyDetail> = {
       "Mantener revisión docente obligatoria antes de comunicar o almacenar el informe.",
     ],
   },
+  "EST-052": {
+    id: "EST-052",
+    problema_resuelve: "Necesidades docentes que todavía no se traducen en una actividad clara, una técnica pertinente o una experiencia de aprendizaje aplicable.",
+    cuando_usarla: "Cuando quieres rediseñar una clase o actividad a partir de una necesidad concreta, de algo que deseas incentivar en tus estudiantes o de una oportunidad de mejora, sin tener que partir de una técnica didáctica previamente definida.",
+    herramientas_ia: ["ChatGPT"],
+    herramientas_detalle: {
+      ChatGPT: {
+        funcionalidad: "Rediseño inicial de clases y actividades",
+        aplicacion_educativa: "Convierte una necesidad docente en una propuesta estructurada de aprendizaje activo, sugiriendo técnicas cuando aportan valor.",
+        nivel: "Inicial",
+        enfoque: "Enseñanza",
+        tip: "Describe primero la necesidad real de tu clase. Una buena definición del reto mejora considerablemente la pertinencia del diseño generado.",
+      },
+    },
+    prompt_base: "Actúa como experto en diseño instruccional y aprendizaje activo.\n\nAyúdame a rediseñar una clase o actividad sobre [TEMA] para estudiantes de [NIVEL EDUCATIVO].\n\nQuiero mejorar, resolver o aprovechar esta situación:\n\n[NECESIDAD, RETO U OPORTUNIDAD DOCENTE]\n\nMe gustaría incentivar principalmente en mis estudiantes:\n\n[PARTICIPACIÓN / COMPRENSIÓN / COLABORACIÓN / PENSAMIENTO CRÍTICO / CREATIVIDAD / AUTONOMÍA / RESOLUCIÓN DE PROBLEMAS / OTRA]\n\nSi ya tengo una técnica didáctica en mente es [TÉCNICA OPCIONAL]. Si no la indico, sugiere una o dos técnicas pertinentes para este propósito y explica brevemente por qué podrían funcionar. No fuerces una técnica si no aporta valor.\n\nConsidera además:\n\nObjetivo de aprendizaje: [OBJETIVO]\n\nDuración disponible: [TIEMPO]\n\nCaracterísticas del grupo o contexto: [CONTEXTO]\n\nRecursos disponibles: [RECURSOS]\n\nPropón un diseño inicial que incluya:\n\nla posibilidad pedagógica que surge de la necesidad planteada;\n\nuna técnica o enfoque sugerido y su pertinencia;\n\nla actividad central;\n\nuna secuencia breve de inicio, desarrollo y cierre;\n\nqué harán activamente los estudiantes;\n\nel producto o evidencia esperada;\n\ncriterios básicos para reconocer el logro;\n\nposibles dificultades o ajustes que conviene revisar antes de aplicarla.\n\nPrioriza una propuesta clara, realista, creativa y fácil de adaptar. No agregues tecnología ni complejidad si no aportan valor al aprendizaje.",
+    pasos: [
+      "Identificar la necesidad o posibilidad",
+      "Definir qué se quiere incentivar",
+      "Explorar una técnica pertinente",
+      "Construir el diseño inicial",
+      "Revisar y ajustar",
+    ],
+    donde_entra_ia: [
+      { paso: "Identificar la necesidad o posibilidad", herramienta: "ChatGPT", descripcion: "Ayuda a convertir una necesidad general en una oportunidad concreta de aprendizaje." },
+      { paso: "Definir qué se quiere incentivar", herramienta: "ChatGPT", descripcion: "Relaciona la intención con posibles formas de participación y aprendizaje activo." },
+      { paso: "Explorar una técnica pertinente", herramienta: "ChatGPT", descripcion: "Propone técnicas por su pertinencia con el propósito, contexto y nivel educativo, sin imponer una metodología." },
+      { paso: "Construir el diseño inicial", herramienta: "ChatGPT", descripcion: "Genera una primera versión práctica de la clase o actividad." },
+      { paso: "Revisar y ajustar", herramienta: "ChatGPT", descripcion: "Identifica posibles dificultades y propone ajustes antes de la implementación." },
+    ],
+    evidencia: "Clase o actividad rediseñada con IA, con propósito, técnica o enfoque pertinente, secuencia, participación activa del estudiante, evidencia esperada y criterios básicos de logro.",
+    next_level: "El diseño inicial puede evolucionar en distintas direcciones para enriquecer la experiencia de aprendizaje sin comprometer su claridad ni aplicabilidad.",
+    next_level_tips: [
+      "Profundiza la técnica: desarrolla con mayor precisión la técnica didáctica seleccionada (momentos, instrucciones, roles, dinámica, recursos y condiciones) para aplicarla con tu grupo.",
+      "Ponla a prueba antes de aplicarla: simula cómo podría interpretar la actividad un estudiante para detectar confusiones, preguntas e instrucciones que conviene ajustar.",
+      "Eleva el reto cognitivo: genera variantes de la actividad que movilicen distintos niveles de pensamiento (comprender, aplicar, analizar, argumentar, crear o tomar decisiones).",
+      "Personaliza para tu grupo: adapta el diseño considerando conocimientos previos, diversidad de perfiles, ritmo, modalidad, tamaño del grupo o necesidades particulares del contexto.",
+      "Convierte la actividad en una experiencia: incorpora momentos de decisión, colaboración, exploración, desafío, reflexión o transferencia que aumenten la participación activa del estudiante.",
+    ],
+  },
 };
