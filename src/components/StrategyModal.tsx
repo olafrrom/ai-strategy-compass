@@ -246,7 +246,7 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
             />
 
             {/* 7. Expandable Next Level */}
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full" onValueChange={handleNextLevelChange}>
               <AccordionItem value="next-level" className="border rounded-lg bg-muted/50 border-border px-3">
                 <AccordionTrigger className="hover:no-underline py-3">
                   <div className="flex items-center gap-2">

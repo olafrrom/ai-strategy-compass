@@ -1,6 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { strategies, enfoques, enfoqueConfig, type Enfoque, type Strategy } from "@/data/strategies";
+import { trackEvent } from "@/lib/analytics";
 import { ArrowRight, ArrowLeft, RotateCcw, Sparkles, Check, Lightbulb } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
