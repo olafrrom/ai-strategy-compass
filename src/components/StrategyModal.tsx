@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Tag, Layers, Award, Zap, Calendar, MessageSquare, ListChecks, FileCheck, ArrowUpRight, Copy, Wrench, Bot } from "lucide-react";
 import { toast } from "sonner";
+import { trackEvent } from "@/lib/analytics";
 import type { Strategy } from "@/data/strategies";
 import { enfoqueConfig, estatusConfig } from "@/data/strategies";
 import { strategyDetails } from "@/data/strategyDetails";

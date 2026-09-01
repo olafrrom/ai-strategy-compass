@@ -105,7 +105,7 @@ const Index = () => {
       <RecommendationWizard
         open={wizardOpen}
         onClose={() => setWizardOpen(false)}
-        onSelect={(s) => setSelectedStrategy(s)}
+        onSelect={handleOpenStrategy}
       />
 
       {/* Bottom banner */}
