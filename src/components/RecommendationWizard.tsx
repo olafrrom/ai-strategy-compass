@@ -139,6 +139,23 @@ const RecommendationWizard = ({ open, onClose, onSelect }: WizardProps) => {
   const [stepIndex, setStepIndex] = useState(0);
   const [answers, setAnswers] = useState<Answers>(initialAnswers);
 
+  useEffect(() => {
+    if (open) trackEvent("strategy_recommender_start");
+  }, [open]);
+
+  useEffect(() => {
+    if (open && stepOrder[stepIndex] === "results") {
+      trackEvent("strategy_recommender_complete", {
+        goal: answers.goal ?? "",
+        context: answers.context ?? "",
+        depth: answers.depth ?? "",
+        experience: answers.experience ?? "",
+        result: answers.result ?? "",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stepIndex, open]);
+
   const step = stepOrder[stepIndex];
   const totalQuestionSteps = 5;
   const progress = step === "results" ? 100 : ((stepIndex) / totalQuestionSteps) * 100 + (1 / totalQuestionSteps) * 100;
