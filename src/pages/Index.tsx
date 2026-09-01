@@ -6,6 +6,7 @@ import StrategyCard from "@/components/StrategyCard";
 import StrategyModal from "@/components/StrategyModal";
 import RecommendationWizard from "@/components/RecommendationWizard";
 import { strategies, type Enfoque, type Strategy } from "@/data/strategies";
+import { trackEvent } from "@/lib/analytics";
 import { AnimatePresence } from "framer-motion";
 
 const Index = () => {
@@ -33,6 +34,22 @@ const Index = () => {
   const handleEnfoqueChange = (e: Enfoque | null) => {
     setSelectedEnfoque(e);
     setSelectedFamilia(null);
+    if (e) trackEvent("strategy_focus_filter", { enfoque: e });
+  };
+
+  const handleFamiliaChange = (f: string | null) => {
+    setSelectedFamilia(f);
+    if (f) trackEvent("strategy_family_filter", { familia: f, enfoque: selectedEnfoque ?? "" });
+  };
+
+  const handleOpenStrategy = (s: Strategy) => {
+    setSelectedStrategy(s);
+    trackEvent("strategy_open", {
+      strategy_id: s.id,
+      strategy_name: s.nombre,
+      enfoque: s.enfoque,
+      familia: s.familia,
+    });
   };
 
   return (
@@ -49,7 +66,7 @@ const Index = () => {
           selectedEnfoque={selectedEnfoque}
           onEnfoqueChange={handleEnfoqueChange}
           selectedFamilia={selectedFamilia}
-          onFamiliaChange={setSelectedFamilia}
+          onFamiliaChange={handleFamiliaChange}
           filteredFamilias={filteredFamilias}
         />
 
@@ -66,7 +83,7 @@ const Index = () => {
                 key={s.id}
                 strategy={s}
                 index={i}
-                onClick={() => setSelectedStrategy(s)}
+                onClick={() => handleOpenStrategy(s)}
               />
             ))}
           </AnimatePresence>
@@ -88,7 +105,7 @@ const Index = () => {
       <RecommendationWizard
         open={wizardOpen}
         onClose={() => setWizardOpen(false)}
-        onSelect={(s) => setSelectedStrategy(s)}
+        onSelect={handleOpenStrategy}
       />
 
       {/* Bottom banner */}

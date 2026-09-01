@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Clock, Tag, Layers, Award, Zap, Calendar, MessageSquare, ListChecks, FileCheck, ArrowUpRight, Copy, Wrench, Bot } from "lucide-react";
 import { toast } from "sonner";
+import { trackEvent } from "@/lib/analytics";
 import type { Strategy } from "@/data/strategies";
 import { enfoqueConfig, estatusConfig } from "@/data/strategies";
 import { strategyDetails } from "@/data/strategyDetails";
@@ -44,6 +45,10 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
     if (detail) {
       navigator.clipboard.writeText(detail.prompt_base);
       toast.success("Prompt copiado");
+      trackEvent("strategy_prompt_copy", {
+        strategy_id: strategy.id,
+        strategy_name: strategy.nombre,
+      });
     }
   };
 
@@ -53,7 +58,23 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
   };
 
   const handleToolClick = (tool: string) => {
-    setExpandedTool(expandedTool === tool ? null : tool);
+    const expanding = expandedTool !== tool;
+    setExpandedTool(expanding ? tool : null);
+    if (expanding) {
+      trackEvent("strategy_tool_expand", {
+        strategy_id: strategy.id,
+        tool,
+      });
+    }
+  };
+
+  const handleNextLevelChange = (value: string) => {
+    if (value === "next-level") {
+      trackEvent("strategy_next_level", {
+        strategy_id: strategy.id,
+        strategy_name: strategy.nombre,
+      });
+    }
   };
 
   return (
@@ -225,7 +246,7 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
             />
 
             {/* 7. Expandable Next Level */}
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full" onValueChange={handleNextLevelChange}>
               <AccordionItem value="next-level" className="border rounded-lg bg-muted/50 border-border px-3">
                 <AccordionTrigger className="hover:no-underline py-3">
                   <div className="flex items-center gap-2">
