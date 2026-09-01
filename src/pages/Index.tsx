@@ -66,7 +66,7 @@ const Index = () => {
           selectedEnfoque={selectedEnfoque}
           onEnfoqueChange={handleEnfoqueChange}
           selectedFamilia={selectedFamilia}
-          onFamiliaChange={setSelectedFamilia}
+          onFamiliaChange={handleFamiliaChange}
           filteredFamilias={filteredFamilias}
         />
 
@@ -83,7 +83,7 @@ const Index = () => {
                 key={s.id}
                 strategy={s}
                 index={i}
-                onClick={() => setSelectedStrategy(s)}
+                onClick={() => handleOpenStrategy(s)}
               />
             ))}
           </AnimatePresence>
