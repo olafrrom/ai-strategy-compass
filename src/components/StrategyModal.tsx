@@ -45,6 +45,10 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
     if (detail) {
       navigator.clipboard.writeText(detail.prompt_base);
       toast.success("Prompt copiado");
+      trackEvent("strategy_prompt_copy", {
+        strategy_id: strategy.id,
+        strategy_name: strategy.nombre,
+      });
     }
   };
 
@@ -54,7 +58,23 @@ const StrategyModal = ({ strategy, open, onClose }: StrategyModalProps) => {
   };
 
   const handleToolClick = (tool: string) => {
-    setExpandedTool(expandedTool === tool ? null : tool);
+    const expanding = expandedTool !== tool;
+    setExpandedTool(expanding ? tool : null);
+    if (expanding) {
+      trackEvent("strategy_tool_expand", {
+        strategy_id: strategy.id,
+        tool,
+      });
+    }
+  };
+
+  const handleNextLevelChange = (value: string) => {
+    if (value === "next-level") {
+      trackEvent("strategy_next_level", {
+        strategy_id: strategy.id,
+        strategy_name: strategy.nombre,
+      });
+    }
   };
 
   return (
